@@ -236,12 +236,5 @@ class Node:
     def hard_apply_block_finish(self, block: dict):
         gc.collect()
 
-        async def stop():
-            pass
-
-        # # check to see if we need to process any missing blocks.
-        asyncio.ensure_future(stop())
-        # pass
-
     async def store_genesis_block(self, genesis_block: dict):
         await self.hard_apply_block(block=genesis_block)
