@@ -39,10 +39,11 @@ async def test_application_startup_and_transaction_processing():
 
     # TODO: Simulate end block
 
-    # TODO: Simulate query
+    # TODO: Simulate query balance
 
     # TODO: Simulate commit
     
+    # TODO: Simulate query balance (should be up)
     
 # Run the test
 pytest.main(["-v", "test_application_startup_and_transaction_processing.py"])
