@@ -35,7 +35,7 @@ async def test_application_startup_and_transaction_processing():
 
     # TODO: Simulate check tx
 
-    # TODO: Simulate deliver tx
+    # TODO: Simulate deliver tx (also check gas_used)
 
     # TODO: Simulate end block
 
