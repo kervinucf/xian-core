@@ -19,7 +19,7 @@ from xian.operations.setup import SETUP_APPLICATION, INIT_APP_STATE
 
 from xian.operations.query import QUERY_OPERATION
 from xian.operations.info import GET_LATEST_INFO
-from xian.operations.process_manager import CREATE_NEW_BLOCK, FINISH_BLOCK_FORMATION
+from xian.operations.block_manager import CREATE_NEW_BLOCK, FINISH_BLOCK_FORMATION
 from xian.operations.state_change import VALIDATE_STATE_CHANGE, PROCESS_STATE_CHANGE
 from xian.operations.updater import UPDATE_APPLICATION_STATE
 
@@ -90,7 +90,7 @@ class Xian(BaseApplication):
         """
         try:
 
-            state_change_flags = VALIDATE_STATE_CHANGE(application=self, operation=proposed_state_change)
+            state_change_flags = VALIDATE_STATE_CHANGE(application=self, operation=req)
 
             if state_change_flags != "OK":
                 return ResponseCheckTx(code=ErrorCode, info=state_change_flags)
