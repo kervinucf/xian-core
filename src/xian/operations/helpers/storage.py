@@ -1,4 +1,4 @@
-import xian.constants as c
+import xian.operations.helpers.constants as c
 
 from contracting import config
 from contracting.db.driver import FSDriver

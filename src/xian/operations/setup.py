@@ -25,18 +25,15 @@ def INIT_APP_STATE(application, operation):
 def SETUP_APPLICATION(application):
     application.config = load_tendermint_config()
     application.genesis = load_genesis_data()
-
+    
     application.client = ContractingClient()
     application.driver = ContractDriver()
     application.nonce_storage = NonceStorage()
     application.xian = Node(application.client, application.driver, application.nonce_storage)
-    application.validator_handler = ValidatorHandler(application)
-
+    application.validator_handler = ValidatorHandler(self)
     application.current_block_meta: dict = None
     application.fingerprint_hashes = []
-
     application.chain_id = application.config.get("chain_id", None)
-
     application.block_service_mode = application.config.get("block_service_mode", True)
 
     if application.chain_id is None:
@@ -69,5 +66,3 @@ def SETUP_APPLICATION(application):
     application.static_rewards_amount_validators = 1
 
     application.current_block_rewards = {}
-
-    return application

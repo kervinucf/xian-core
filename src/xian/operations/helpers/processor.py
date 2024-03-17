@@ -4,7 +4,7 @@ import logging
 
 from datetime import datetime
 
-from xian.utils import format_dictionary, tx_hash_from_tx
+from xian.operations.helpers.utils import format_dictionary, tx_hash_from_tx
 from contracting.execution.executor import Executor
 from contracting.db.encoder import convert_dict, safe_repr
 from contracting.stdlib.bridge.time import Datetime

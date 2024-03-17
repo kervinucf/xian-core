@@ -17,7 +17,7 @@ proxy_app = "tcp://127.0.0.1:26658"
 # A custom human readable name for this node
 moniker = "Stu"
 
-chain_id = "unique-chain-id-goes-here"
+chain_id = "hypercore"
 
 block_service_mode = true
 
